@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PostList from './PostList';
-
+import {Link} from 'react-router-dom';
 
 export default class CreatePost extends Component{
 
@@ -63,7 +63,7 @@ export default class CreatePost extends Component{
         <textarea onChange={this.handlePost} value={this.state.post} name="blogText">Enter text here... </textarea>
         </div>
 
-        <button onClick={this.addToBlog}>Submit</button>
+        <button as={Link} to='/show' onClick={this.addToBlog}><Link to='/show'>Submit</Link></button>
         </form>
       </div>
     )
